@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
   foreign_key: :user_id,
   association_foreign_key: :student_user_id
 
-  has_and_belongs_to_many :Instructor,
+  has_and_belongs_to_many :instructors,
   class_name: "User",
-  join_table: :Instructors,
+  join_table: :instructors,
   foreign_key: :user_id,
-  association_foreign_key: :Instructor_user_id
+  association_foreign_key: :instructor_user_id
 
 end
